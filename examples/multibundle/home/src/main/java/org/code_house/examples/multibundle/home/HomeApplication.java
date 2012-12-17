@@ -8,8 +8,6 @@ public class HomeApplication extends WebApplication {
 
     @Override
     protected void init() {
-        initializeComponents();
-
         mountPage("/", HomePage.class);
 
         getComponentInstantiationListeners().add(new RenderPerformanceListener());

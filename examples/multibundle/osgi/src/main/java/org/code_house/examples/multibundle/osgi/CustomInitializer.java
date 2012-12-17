@@ -4,7 +4,7 @@ import org.apache.wicket.Application;
 import org.apache.wicket.IInitializer;
 import org.apache.wicket.protocol.http.WebApplication;
 
-public class OsgiInitializer implements IInitializer {
+public class CustomInitializer implements IInitializer {
 
     public void init(Application application) {
         if (application instanceof WebApplication) {
