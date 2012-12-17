@@ -21,6 +21,7 @@
         <wicket.version>6.3.0</wicket.version>
     </properties>
 
+    <!-- Build configuration .. -->
     <build>
         <pluginManagement>
             <plugins>
