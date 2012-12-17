@@ -14,7 +14,6 @@
         <module>examples</module>
     </modules>
 
-    <!-- Properties --> 
     <properties>
         <karaf.version>2.2.8</karaf.version>
         <osgi.version>4.2.0</osgi.version>
