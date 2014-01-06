@@ -19,7 +19,7 @@ package org.apache.wicket.osgi.tracking;
 import java.util.Hashtable;
 
 import org.apache.wicket.application.IClassResolver;
-import org.apache.wicket.osgi.OsgiClassResolver;
+import org.apache.wicket.osgi.classloader.OsgiClassResolver;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleEvent;
 import org.osgi.framework.Constants;

@@ -16,8 +16,8 @@
  */
 package org.apache.wicket.osgi.tracking;
 
-import org.apache.wicket.application.CompoundClassResolver;
 import org.apache.wicket.application.IClassResolver;
+import org.apache.wicket.osgi.classloader.CompoundClassResolver;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;

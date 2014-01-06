@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
 
-    <service interface="org.apache.wicket.protocol.http.WebApplication">
+    <service interface="org.apache.wicket.protocol.http.IWebApplicationFactory">
         <service-properties>
             <entry key="mount-point" value="/test" />
             <entry key="application-name" value="simple" />
         </service-properties>
-        <bean class="org.code_house.wicket.test.MyApplication" />
+        <bean class="org.code_house.wicket.test.MyApplicationFactory" />
     </service>
 
     <reference id="features" interface="org.apache.karaf.features.FeaturesService" />

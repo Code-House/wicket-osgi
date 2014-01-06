@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.wicket.osgi;
+package org.apache.wicket.osgi.classloader;
 
 import org.apache.wicket.application.AbstractClassResolver;
 import org.osgi.framework.Bundle;
@@ -30,5 +30,9 @@ public class OsgiClassResolver extends AbstractClassResolver {
         return new BundleDelegatingClassLoader(bundle);
     }
 
+    @Override
+    public String toString() {
+        return "OsgiClassResolver[" + bundle.getSymbolicName() + "]";
+    }
 }
 

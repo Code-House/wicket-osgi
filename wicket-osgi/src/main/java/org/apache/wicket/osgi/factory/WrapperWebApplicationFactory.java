@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 
 import org.apache.wicket.Application;
 import org.apache.wicket.application.CompoundClassResolver;
-import org.apache.wicket.osgi.OsgiClassResolver;
+import org.apache.wicket.osgi.classloader.OsgiClassResolver;
 import org.apache.wicket.protocol.http.IWebApplicationFactory;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.protocol.http.WicketFilter;
@@ -24,7 +24,7 @@ public class WrapperWebApplicationFactory implements IWebApplicationFactory {
 
     public WebApplication createApplication(WicketFilter filter) {
         WebApplication webApplication = delegate.createApplication(filter);
-        dirtyClassLoaderHack(webApplication);
+        //dirtyClassLoaderHack(webApplication);
         return webApplication;
     }
 
