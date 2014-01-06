@@ -27,7 +27,7 @@ public class OsgiClassResolver extends AbstractClassResolver {
     }
 
     public ClassLoader getClassLoader() {
-        return new BundleDelegatingClassLoader(bundle);
+        return bundle.adapt(ClassLoader.class);
     }
 
     @Override
