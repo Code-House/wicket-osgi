@@ -16,8 +16,13 @@
  */
 package org.apache.wicket.osgi.classloader;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.Iterator;
+
 import org.apache.wicket.application.AbstractClassResolver;
 import org.osgi.framework.Bundle;
+import org.osgi.framework.wiring.BundleWiring;
 
 public class OsgiClassResolver extends AbstractClassResolver {
     private Bundle bundle;
@@ -27,7 +32,16 @@ public class OsgiClassResolver extends AbstractClassResolver {
     }
 
     public ClassLoader getClassLoader() {
-        return bundle.adapt(ClassLoader.class);
+        return bundle.adapt(BundleWiring.class).getClassLoader();
+    }
+
+    @Override
+    public Iterator<URL> getResources(String name) {
+        try {
+            return new EnumrationIterator<URL>(bundle.getResources(name));
+        } catch (IOException e) {
+            return null;
+        }
     }
 
     @Override

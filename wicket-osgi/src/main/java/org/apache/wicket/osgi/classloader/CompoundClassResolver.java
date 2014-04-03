@@ -27,7 +27,7 @@ public class CompoundClassResolver implements IClassResolver {
                 return resolver.resolveClass(className);
             } catch (ClassNotFoundException cnfx) {
                 if (debug) {
-                    logger.debug("ClassResolver '{}' cannot find class: '{}'", resolver.getClass().getName(), className);
+                    logger.debug("ClassResolver '{}' cannot find class: '{}'", resolver, className);
                 }
             }
         }

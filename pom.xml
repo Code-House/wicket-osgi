@@ -16,7 +16,7 @@
 
     <properties>
         <karaf.version>2.3.3</karaf.version>
-        <osgi.version>4.3.0</osgi.version>
+        <osgi.version>4.3.1</osgi.version>
         <servlet.version>2.5</servlet.version>
         <wicket.version>6.9.1</wicket.version>
     </properties>
@@ -37,6 +37,14 @@
                     <configuration>
                        <source>1.5</source>
                        <target>1.5</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-eclipse-plugin</artifactId>
+                    <version>2.9</version>
+                    <configuration>
+                        <addGroupIdToProjectName>true</addGroupIdToProjectName>
                     </configuration>
                 </plugin>
             </plugins>
